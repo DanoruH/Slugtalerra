@@ -1,0 +1,22 @@
+{
+    "Group": "DanoMods",
+    "Name": "Slugtalerra",
+    "Version": "1.0.0",
+    "Description": "Slug Tales",
+    "Authors": [
+        {
+            "Name": "Danoru"
+        }
+    ],
+    "Website": "",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "com.slugtalerra.Game",
+    "IncludesAssetPack": true
+}
