@@ -1,0 +1,57 @@
+{
+  "Model": "Ammo_Empty",
+  "SpawnOffset": {
+    "X": 0.5,
+    "Y": -0.3,
+    "Z": -0.7
+  },
+  "SpawnRotationOffset": {
+    "Yaw": 360,
+    "Pitch": 0,
+    "Roll": 0
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 20,
+    "TerminalVelocityAir": 15,
+    "TerminalVelocityWater": 1,
+    "Bounciness": 0.6,
+    "BounceCount": 1,
+    "SticksVertically": false,
+    "ComputeYaw": true,
+    "ComputePitch": true,
+    "HitWaterImpulseLoss": 0,
+    "Density": 1600,
+    "BounceLimit": 0.1,
+    "RotationMode": "Velocity"
+  },
+  "Interactions": {
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 2,
+          "Next": "Remove_Ammo_Projectile"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.5,
+          "Next": "Remove_Ammo_Projectile"
+        }
+      ]
+    },
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 5,
+          "Next": "Remove_Ammo_Projectile"
+        }
+      ]
+    }
+  }
+}

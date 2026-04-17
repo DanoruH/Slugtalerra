@@ -1,0 +1,12 @@
+{
+  "Interactions": [
+    {
+      "Type": "Simple",
+      "Effects": {
+        "LocalSoundEventId": "SFX_Blaster_Empty",
+        "ClearSoundEventOnFinish": false
+      }
+    }
+  ],
+  "RequireNewClick": false
+}

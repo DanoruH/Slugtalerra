@@ -1,0 +1,46 @@
+{
+  "Model": "Flopper_Slug",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15,
+    "SticksVertically": true,
+    "TerminalVelocityAir": 25,
+    "TerminalVelocityWater": 15
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "SpawnNPC",
+          "EntityId": "Bat",
+          "UseLatestTarget": true,
+          "SpawnOffset": {
+            "Y": 2
+          }
+        }
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Velocimorph",
+            "LocalSoundEventId": "SFX_Velocimorph"
+          }
+        }
+      ]
+    }
+  },
+  "LaunchForce": 30,
+  "SpawnOffset": {
+    "X": 0.35,
+    "Y": -0.6,
+    "Z": -1.65
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 2,
+    "Yaw": 0.25,
+    "Roll": 0
+  }
+}

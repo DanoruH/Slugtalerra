@@ -1,0 +1,41 @@
+{
+  "BlockType": {
+    "DrawType": "Model",
+    "CustomModel": "Items/Accesories/Ammo.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Accesories/Ammo.png"
+      }
+    ],
+    "CustomModelScale": 0.45
+  },
+  "Icon": "Icons/ItemsGenerated/Ammo_Feed.png",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -17
+    ]
+  },
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Condition",
+          "Crouching": false,
+          "Failed": "Block_Secondary"
+        }
+      ]
+    }
+  },
+  "Utility": {
+    "Compatible": true
+  },
+  "Scale": 1.25
+}

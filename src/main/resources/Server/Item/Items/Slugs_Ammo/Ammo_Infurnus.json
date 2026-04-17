@@ -1,0 +1,46 @@
+{
+  "BlockType": {
+    "CustomModel": "Items/Slugs_Ammo/Infurnus_Ammo.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Slugs_Ammo/Infurnus_Slug.png"
+      }
+    ],
+    "DrawType": "Model",
+    "VariantRotation": "NESW",
+    "RandomRotation": "YawStep1XZ",
+    "RotationYawPlacementOffset": "OneEighty",
+    "CustomModelScale": 0.3
+  },
+  "PlayerAnimationsId": "Torch",
+  "Utility": {
+    "Usable": true,
+    "Compatible": true
+  },
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Condition",
+          "Crouching": false,
+          "Failed": "Block_Secondary"
+        }
+      ]
+    }
+  },
+  "Icon": "Icons/ItemsGenerated/Ammo_Infurnus.png",
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      345,
+      225,
+      345
+    ],
+    "Translation": [
+      0,
+      -22.5
+    ]
+  },
+  "UsePlayerAnimations": true,
+  "Scale": 1.25
+}

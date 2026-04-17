@@ -1,0 +1,48 @@
+{
+  "BlockType": {
+    "CustomModel": "Items/Slugs_Ammo/Flopper_Ammo.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Slugs_Ammo/Flopper_Slug.png"
+      }
+    ],
+    "DrawType": "Model",
+    "VariantRotation": "NESW",
+    "RandomRotation": "YawStep1XZ",
+    "RotationYawPlacementOffset": "OneEighty",
+    "CustomModelScale": 0.3
+  },
+  "PlayerAnimationsId": "Torch",
+  "Utility": {
+    "Usable": true,
+    "Compatible": true
+  },
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Condition",
+          "Crouching": false,
+          "Failed": "Block_Secondary"
+        }
+      ]
+    }
+  },
+  "Icon": "Icons/ItemsGenerated/Ammo_Flopper.png",
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      345,
+      225,
+      345
+    ],
+    "Translation": [
+      0,
+      -22.5
+    ]
+  },
+  "UsePlayerAnimations": true,
+  "Model": "Items/Slugs_Ammo/Flopper_Ammo.blockymodel",
+  "Texture": "Items/Slugs_Ammo/Flopper_Slug.png",
+  "Scale": 1.25
+}

@@ -1,0 +1,5 @@
+{
+  "Type": "RemoveEntity",
+  "ViewDistance": 96,
+  "Entity": "User"
+}

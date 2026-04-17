@@ -1,0 +1,11 @@
+{
+  "Parent": "SFX_Attn_Moderate",
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Slugs/Slug_Velocimorph_Mono.ogg"
+      ],
+      "Looping": false
+    }
+  ]
+}

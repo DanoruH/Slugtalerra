@@ -1,0 +1,25 @@
+{
+  "Model": "NPC/Velocimorph/Models/Infurnus_Velocimorph.blockymodel",
+  "Texture": "NPC/Velocimorph/Models/Infurnus_Velocimorph.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    }
+  },
+  "EyeHeight": 1,
+  "Icon": "Icons/ModelsGenerated/Infurnus_Velocimorph.png",
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      0,
+      331,
+      0
+    ],
+    "Translation": [
+      4,
+      -55
+    ]
+  }
+}

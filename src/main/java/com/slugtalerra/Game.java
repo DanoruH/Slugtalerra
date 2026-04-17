@@ -1,8 +1,14 @@
 package com.slugtalerra;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.protocol.InteractionState;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.slugtalerra.interactions.BlasterInteraction;
+import com.slugtalerra.interactions.ChargingMetadataInteraction;
+import com.slugtalerra.interactions.InventoryModifyConditionalInteraction;
+import com.slugtalerra.interactions.ItemsConditionInteraction;
 
 import javax.annotation.Nonnull;
 
@@ -22,5 +28,10 @@ public class Game extends JavaPlugin {
     @Override
     protected void setup() {
         LOGGER.atInfo().log("Setting up plugin " + this.getName());
+
+        this.getCodecRegistry(Interaction.CODEC).register("Blaster", BlasterInteraction.class, BlasterInteraction.CODEC);
+        this.getCodecRegistry(Interaction.CODEC).register("ItemsCondition", ItemsConditionInteraction.class, ItemsConditionInteraction.CODEC);
+        this.getCodecRegistry(Interaction.CODEC).register("InventoryModifyCondition", InventoryModifyConditionalInteraction.class, InventoryModifyConditionalInteraction.CODEC);
+        this.getCodecRegistry(Interaction.CODEC).register("ChargedMetaData", ChargingMetadataInteraction.class, ChargingMetadataInteraction.CODEC);
     }
 }

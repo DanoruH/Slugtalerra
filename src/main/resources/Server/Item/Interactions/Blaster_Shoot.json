@@ -1,0 +1,9 @@
+{
+  "Type": "Blaster",
+  "Effects": {
+    "LocalSoundEventId": "SFX_Blaster_Shoot1",
+    "WaitForAnimationToFinish": false,
+    "ItemAnimationId": "Shoot",
+    "ClearAnimationOnFinish": true
+  }
+}

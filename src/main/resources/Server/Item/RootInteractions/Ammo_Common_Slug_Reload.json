@@ -1,0 +1,24 @@
+{
+  "RequireNewClick": true,
+  "Interactions": [
+    {
+      "Type": "StatsCondition",
+      "LessThan": true,
+      "Costs": {
+        "Ammo": 100
+      },
+      "Next": {
+        "Type": "ItemsCondition",
+        "Failed": {
+          "Type": "Replace",
+          "Var": "No_Reload_Effects"
+        },
+        "Next": {
+          "Type": "Replace",
+          "Var": "Reload_Entry"
+        }
+      },
+      "ValueType": "Percent"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "FirstPerson": {
+    "Duration": 0.0,
+    "EaseIn": {
+      "Time": 0.1,
+      "Type": "Linear"
+    },
+    "EaseOut": {
+      "Time": 0.1,
+      "Type": "Linear"
+    },
+    "Rotation": {
+      "Pitch": [
+        {
+          "Frequency": 20,
+          "Amplitude": -0.25,
+          "Type": "Cos",
+          "Clamp": {
+            "Min": 0
+          }
+        }
+      ],
+      "Yaw": [
+        {
+          "Frequency": 4,
+          "Amplitude": -0.1,
+          "Type": "Cos",
+          "Clamp": {
+            "Min": 0
+          }
+        }
+      ],
+      "Roll": [
+        {
+          "Frequency": 5,
+          "Amplitude": 0.05,
+          "Type": "Cos"
+        }
+      ]
+    }
+  },
+  "ThirdPerson": {
+    "Duration": 0.0,
+    "EaseIn": {
+      "Time": 0.1,
+      "Type": "Linear"
+    },
+    "EaseOut": {
+      "Time": 0.1,
+      "Type": "Linear"
+    },
+    "Rotation": {
+      "Pitch": [
+        {
+          "Frequency": 20,
+          "Amplitude": -0.25,
+          "Type": "Cos",
+          "Clamp": {
+            "Min": 0
+          }
+        }
+      ],
+      "Yaw": [
+        {
+          "Frequency": 4,
+          "Amplitude": -0.1,
+          "Type": "Cos",
+          "Clamp": {
+            "Min": 0
+          }
+        }
+      ],
+      "Roll": [
+        {
+          "Frequency": 5,
+          "Amplitude": 0.05,
+          "Type": "Cos"
+        }
+      ]
+    }
+  }
+}

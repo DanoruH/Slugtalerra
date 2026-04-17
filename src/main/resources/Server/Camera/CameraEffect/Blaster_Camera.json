@@ -1,0 +1,7 @@
+{
+  "Type": "CameraShake",
+  "CameraShake": "Blaster_CameraShake",
+  "Intensity": {
+    "Value": 0.712
+  }
+}

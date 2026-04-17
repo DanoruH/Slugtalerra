@@ -1,0 +1,46 @@
+{
+  "Interactions": [
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Serial",
+              "Interactions": [
+                {
+                  "Type": "Simple",
+                  "Effects": {
+                    "ItemAnimationId": "BlasterReload",
+                    "LocalSoundEventId": "SFX_Blaster_Reload",
+                    "WaitForAnimationToFinish": true,
+                    "WorldSoundEventId": "SFX_Blaster_Reload",
+                    "StartDelay": 0.2
+                  },
+                  "RunTime": 1
+                },
+                {
+                  "Type": "InventoryModifyCondition",
+                  "RunTime": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "RunTime": 0.33,
+              "Next": {
+                "Type": "Projectile",
+                "Config": "Blaster_Ammo_Discard"
+              }
+            }
+          ]
+        }
+      ],
+      "CancelOnItemChange": false
+    }
+  ]
+}

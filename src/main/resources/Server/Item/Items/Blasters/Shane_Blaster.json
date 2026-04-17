@@ -1,0 +1,174 @@
+{
+  "Model": "Items/Blasters/Shane_Blaster.blockymodel",
+  "Scale": 0.65,
+  "Texture": "Items/Blasters/Shane_Blaster.png",
+  "Icon": "Icons/ItemsGenerated/Shane_Blaster.png",
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      -15,
+      -14
+    ]
+  },
+  "PlayerAnimationsId": "BlasterAnimations",
+  "Quality": "Epic",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Ammo": 1
+          },
+          "Failed": {
+            "Type": "Replace",
+            "Var": "No_Ammo_Effects"
+          },
+          "Next": {
+            "Type": "ChangeStat",
+            "StatModifiers": {
+              "Ammo": -1
+            },
+            "Next": {
+              "Type": "Replace",
+              "Var": "Blaster_Shoot"
+            }
+          },
+          "LessThan": false,
+          "ValueType": "Percent"
+        }
+      ],
+      "Cooldown": {
+        "Id": "Shoot",
+        "Cooldown": 0.45
+      }
+    },
+    "Ability3": "Ammo_Common_Slug_Reload"
+  },
+  "Utility": {
+    "Compatible": true,
+    "Usable": true
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "InteractionVars": {
+    "Blaster_Shoot": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Blaster_Shoot_Effects"
+        },
+        {
+          "Type": "Simple",
+          "Effects": {
+            "ItemAnimationId": "Shoot"
+          },
+          "Next": {
+            "Type": "Blaster"
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "Camera_FX"
+        }
+      ]
+    },
+    "Blaster_Shoot_Effects": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Blaster_Shoot1"
+          }
+        }
+      ]
+    },
+    "Camera_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.05,
+          "Effects": {
+            "CameraEffect": "Blaster_Camera"
+          }
+        }
+      ]
+    },
+    "No_Ammo_Effects": "No_Ammo_Blaster",
+    "No_Reload_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Blaster_No_Reload"
+          }
+        }
+      ]
+    },
+    "Reload_Entry": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Reload_Single"
+        }
+      ]
+    },
+    "Reload_Single": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Repeat",
+              "ForkInteractions": {
+                "Interactions": [
+                  {
+                    "Type": "StatsCondition",
+                    "LessThan": true,
+                    "Costs": {
+                      "Ammo": 100
+                    },
+                    "ValueType": "Percent",
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Next": {
+                        "Type": "Replace",
+                        "Var": "Reload_Effects"
+                      },
+                      "StatModifiers": {
+                        "Ammo": 1
+                      }
+                    }
+                  }
+                ]
+              },
+              "Repeat": 1
+            }
+          ]
+        }
+      ]
+    },
+    "Reload_Effects": "Reload_Common_Slug_Effect"
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    },
+    "EntityStatsToClear": [
+      "Ammo"
+    ]
+  },
+  "UsePlayerAnimations": true
+}

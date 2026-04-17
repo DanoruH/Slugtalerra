@@ -1,0 +1,10 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Blaster/Blaster_Empty_Ammo.ogg"
+      ]
+    }
+  ],
+  "Parent": "SFX_Attn_Loud"
+}

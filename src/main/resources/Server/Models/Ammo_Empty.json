@@ -1,0 +1,26 @@
+{
+  "Model": "Items/Accesories/Ammo_Discard.blockymodel",
+  "Texture": "Items/Accesories/Ammo_Discard.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    }
+  },
+  "Icon": "Icons/ModelsGenerated/Ammo_Empty.png",
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      0,
+      -45,
+      0
+    ],
+    "Translation": [
+      0,
+      -49
+    ]
+  },
+  "MinScale": 1,
+  "MaxScale": 1
+}
